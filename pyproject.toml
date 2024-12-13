@@ -1,0 +1,66 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pink_bench"
+readme = "README.md"
+authors = [
+    {name = "Stéphane Caron", email = "stephane.caron@normalesup.org"},
+]
+maintainers = [
+    {name = "Stéphane Caron", email = "stephane.caron@normalesup.org"},
+]
+dynamic = ['version', 'description']
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Robot Framework :: Library",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "loop-rate-limiters >=0.1.0",
+    "pin >=2.6.3",
+    "qpmpc >=2.6.3",
+    "qpsolvers >=4.3.1",
+    "quadprog >=0.1.11",
+]
+keywords = ["inverse", "kinematics", "pinocchio"]
+
+[project.urls]
+Homepage = "https://stephane-caron.github.io/pink_bench/"
+Documentation = "https://stephane-caron.github.io/pink_bench/"
+Source = "https://github.com/stephane-caron/pink_bench"
+Tracker = "https://github.com/stephane-caron/pink_bench/issues"
+Changelog = "https://github.com/stephane-caron/pink_bench/blob/main/CHANGELOG.md"
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+select = [
+    # pyflakes
+    "F",
+    # pycodestyle
+    "E",
+    "W",
+    # isort
+    "I001",
+    # pydocstyle
+    "D"
+]
+ignore = [
+    "D401",  # good for methods but not for class docstrings
+    "D405",  # British-style section names are also "proper"!
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
