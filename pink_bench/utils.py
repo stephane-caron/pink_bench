@@ -7,11 +7,15 @@
 import numpy as np
 
 
-class RunningMeanStd(object):
+class RunningMeanStd:
+    """Running average and standard deviation estimator."""
+
     def __init__(self):
+        """Initialize estimator."""
         self.reset()
 
     def reset(self):
+        """Reset estimator."""
         self.n = 0
         self.x = 0.0
         self.x2 = 0.0
