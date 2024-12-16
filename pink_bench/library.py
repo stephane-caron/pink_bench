@@ -19,11 +19,11 @@ from .trajectories import (
 )
 
 # Dictionary mapping scenario names to their corresponding scenario
-scenarios: Dict[str, Scenario] = {}
+SCENARIOS: Dict[str, Scenario] = {}
 
 # =============================================================================
 
-scenarios["edo"] = Scenario(
+SCENARIOS["edo"] = Scenario(
     name="edo",
     duration=10.0,  # [s]
     robot_description="edo_description",
@@ -50,7 +50,7 @@ scenarios["edo"] = Scenario(
 
 # =============================================================================
 
-scenarios["fanuc"] = Scenario(
+SCENARIOS["fanuc"] = Scenario(
     name="fanuc",
     duration=10.0,  # [s]
     robot_description="fanuc_m710ic_description",
@@ -73,7 +73,7 @@ scenarios["fanuc"] = Scenario(
 
 # =============================================================================
 
-scenarios["gen2"] = Scenario(
+SCENARIOS["gen2"] = Scenario(
     name="gen2",
     duration=10.0,  # [s]
     robot_description="gen2_description",
@@ -99,7 +99,7 @@ scenarios["gen2"] = Scenario(
 
 # =============================================================================
 
-scenarios["gen3"] = Scenario(
+SCENARIOS["gen3"] = Scenario(
     name="gen3",
     duration=10.0,  # [s]
     robot_description="gen3_description",
@@ -123,7 +123,7 @@ scenarios["gen3"] = Scenario(
 
 # =============================================================================
 
-scenarios["iiwa14"] = Scenario(
+SCENARIOS["iiwa14"] = Scenario(
     name="iiwa14",
     duration=10.0,  # [s]
     robot_description="iiwa14_description",
@@ -140,7 +140,7 @@ scenarios["iiwa14"] = Scenario(
 
 # =============================================================================
 
-scenarios["panda"] = Scenario(
+SCENARIOS["panda"] = Scenario(
     name="panda",
     duration=10.0,  # [s]
     robot_description="panda_description",
@@ -161,7 +161,7 @@ scenarios["panda"] = Scenario(
 
 # =============================================================================
 
-scenarios["poppy_ergo_jr"] = Scenario(
+SCENARIOS["poppy_ergo_jr"] = Scenario(
     name="poppy_ergo_jr",
     duration=10.0,  # [s]
     robot_description="poppy_ergo_jr_description",
@@ -179,7 +179,7 @@ scenarios["poppy_ergo_jr"] = Scenario(
 
 # =============================================================================
 
-scenarios["ur10"] = Scenario(
+SCENARIOS["ur10"] = Scenario(
     name="ur10",
     duration=10.0,  # [s]
     robot_description="ur10_description",
@@ -197,7 +197,7 @@ scenarios["ur10"] = Scenario(
 
 # =============================================================================
 
-scenarios["ur3"] = Scenario(
+SCENARIOS["ur3"] = Scenario(
     name="ur3",
     duration=10.0,  # [s]
     robot_description="ur3_description",
@@ -215,7 +215,7 @@ scenarios["ur3"] = Scenario(
 
 # =============================================================================
 
-scenarios["ur5"] = Scenario(
+SCENARIOS["ur5"] = Scenario(
     name="ur5",
     duration=10.0,  # [s]
     robot_description="ur5_description",
@@ -233,7 +233,7 @@ scenarios["ur5"] = Scenario(
 
 # =============================================================================
 
-scenarios["z1"] = Scenario(
+SCENARIOS["z1"] = Scenario(
     name="z1",
     duration=10.0,  # [s]
     robot_description="z1_description",
@@ -251,7 +251,7 @@ scenarios["z1"] = Scenario(
 
 # =============================================================================
 
-scenarios["atlas_drc"] = Scenario(
+SCENARIOS["atlas_drc"] = Scenario(
     name="atlas_drc",
     duration=10.0,  # [s]
     robot_description="atlas_drc_description",
@@ -318,7 +318,7 @@ scenarios["atlas_drc"] = Scenario(
 
 # =============================================================================
 
-scenarios["atlas_v4"] = Scenario(
+SCENARIOS["atlas_v4"] = Scenario(
     name="atlas_v4",
     duration=10.0,  # [s]
     robot_description="atlas_v4_description",
@@ -377,7 +377,7 @@ scenarios["atlas_v4"] = Scenario(
 
 # =============================================================================
 
-scenarios["draco3"] = Scenario(
+SCENARIOS["draco3"] = Scenario(
     name="draco3",
     duration=10.0,  # [s]
     robot_description="draco3_description",
@@ -442,7 +442,7 @@ scenarios["draco3"] = Scenario(
 
 # =============================================================================
 
-scenarios["ergocub"] = Scenario(
+SCENARIOS["ergocub"] = Scenario(
     name="ergocub",
     duration=10.0,  # [s]
     robot_description="ergocub_description",
@@ -501,7 +501,7 @@ scenarios["ergocub"] = Scenario(
 
 # =============================================================================
 
-scenarios["h1"] = Scenario(
+SCENARIOS["h1"] = Scenario(
     name="h1",
     duration=10.0,  # [s]
     robot_description="h1_description",
@@ -560,7 +560,7 @@ scenarios["h1"] = Scenario(
 
 # =============================================================================
 
-scenarios["icub"] = Scenario(
+SCENARIOS["icub"] = Scenario(
     name="icub",
     duration=10.0,  # [s]
     robot_description="icub_description",
@@ -635,7 +635,7 @@ scenarios["icub"] = Scenario(
 
 # =============================================================================
 
-scenarios["jaxon"] = Scenario(
+SCENARIOS["jaxon"] = Scenario(
     name="jaxon",
     duration=10.0,  # [s]
     robot_description="jaxon_description",
@@ -702,7 +702,7 @@ scenarios["jaxon"] = Scenario(
 
 # =============================================================================
 
-scenarios["jvrc"] = Scenario(
+SCENARIOS["jvrc"] = Scenario(
     name="jvrc",
     duration=10.0,  # [s]
     robot_description="jvrc_description",
@@ -761,7 +761,7 @@ scenarios["jvrc"] = Scenario(
 
 # =============================================================================
 
-scenarios["r2"] = Scenario(
+SCENARIOS["r2"] = Scenario(
     name="r2",
     duration=10.0,  # [s]
     robot_description="r2_description",
@@ -820,7 +820,7 @@ scenarios["r2"] = Scenario(
 
 # =============================================================================
 
-scenarios["romeo"] = Scenario(
+SCENARIOS["romeo"] = Scenario(
     name="romeo",
     duration=10.0,  # [s]
     robot_description="romeo_description",
@@ -879,7 +879,7 @@ scenarios["romeo"] = Scenario(
 
 # =============================================================================
 
-scenarios["sigmaban"] = Scenario(
+SCENARIOS["sigmaban"] = Scenario(
     name="sigmaban",
     duration=10.0,  # [s]
     robot_description="sigmaban_description",
@@ -946,7 +946,7 @@ scenarios["sigmaban"] = Scenario(
 
 # =============================================================================
 
-scenarios["talos"] = Scenario(
+SCENARIOS["talos"] = Scenario(
     name="talos",
     duration=10.0,  # [s]
     robot_description="talos_description",
@@ -1015,7 +1015,7 @@ scenarios["talos"] = Scenario(
 
 # =============================================================================
 
-scenarios["valkyrie"] = Scenario(
+SCENARIOS["valkyrie"] = Scenario(
     name="valkyrie",
     duration=10.0,  # [s]
     robot_description="valkyrie_description",
@@ -1082,7 +1082,7 @@ scenarios["valkyrie"] = Scenario(
 
 # =============================================================================
 
-scenarios["bolt"] = Scenario(
+SCENARIOS["bolt"] = Scenario(
     name="bolt",
     duration=10.0,  # [s]
     robot_description="bolt_description",
@@ -1141,7 +1141,7 @@ scenarios["bolt"] = Scenario(
 
 # =============================================================================
 
-scenarios["cassie"] = Scenario(
+SCENARIOS["cassie"] = Scenario(
     name="cassie",
     duration=10.0,  # [s]
     robot_description="cassie_description",
@@ -1212,7 +1212,7 @@ scenarios["cassie"] = Scenario(
 
 # =============================================================================
 
-scenarios["spryped"] = Scenario(
+SCENARIOS["spryped"] = Scenario(
     name="spryped",
     duration=10.0,  # [s]
     robot_description="spryped_description",
@@ -1271,4 +1271,4 @@ scenarios["spryped"] = Scenario(
 
 # =============================================================================
 
-__all__ = ["scenarios"]
+__all__ = ["SCENARIOS"]

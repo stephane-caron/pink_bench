@@ -6,14 +6,16 @@
 
 """Library of robot motions with inverse kinematics and predictive control."""
 
-from .library import scenarios
+from .library import SCENARIOS
+from .play_scenario import play_scenario
 from .scenario import Scenario
 from .scene import Scene
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 __all__ = [
+    "play_scenario",
     "Scenario",
     "Scene",
-    "scenarios",
+    "SCENARIOS",
 ]
