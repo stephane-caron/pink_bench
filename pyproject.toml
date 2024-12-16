@@ -19,7 +19,6 @@ classifiers = [
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: Apache Software License",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -28,10 +27,12 @@ classifiers = [
 ]
 dependencies = [
     "loop-rate-limiters >=0.1.0",
-    "pin >=2.6.3",
+    "matplotlib",
+    "pin-pink >=3.1.0",
     "qpmpc >=2.6.3",
     "qpsolvers >=4.3.1",
     "quadprog >=0.1.11",
+    "robot_descriptions >=1.13.0",
 ]
 keywords = ["inverse", "kinematics", "pinocchio"]
 
