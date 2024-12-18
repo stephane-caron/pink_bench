@@ -2,3 +2,4 @@
 *.pyo
 .ropeproject
 dist/
+examples/videos

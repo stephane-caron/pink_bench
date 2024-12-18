@@ -1,5 +1,7 @@
 # pink\_bench
 
+[![PyPI version](https://img.shields.io/pypi/v/pink_bench)](https://pypi.org/project/pink_bench/)
+
 A library of robot motions performed by inverse kinematics and model predictive control:
 
 <p align="center">
