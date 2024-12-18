@@ -37,3 +37,7 @@ This will open a MeshCat tab in your web browser playing the scenario for its pr
 ```console
 $ ./examples/run_scenario.py jaxon --dt 0.005 --qpsolver proxqp
 ```
+
+## See also
+
+- [ik\_qpbenchmark]: A test set for QP solvers with differential IK problems generated on the pink bench.
