@@ -17,10 +17,12 @@ def play_scenario(
     name: str,
     dt: float,
     qpsolver: str,
+    visualize: bool = True,
+    record: bool = False,
     plot_mpc_axis: Optional[str] = None,
 ):
     scenario = SCENARIOS[name]
-    scene = Scene(scenario, visualize=True)
+    scene = Scene(scenario, visualize=visualize, record=record)
     if plot_mpc_axis is not None:
         scene.plot_mpc_axis(0 if plot_mpc_axis == "x" else 1)
     rate = RateLimiter(frequency=1.0 / dt, warn=False)
