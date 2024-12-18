@@ -40,4 +40,4 @@ $ ./examples/run_scenario.py jaxon --dt 0.005 --qpsolver proxqp
 
 ## See also
 
-- [ik\_qpbenchmark]: A test set for QP solvers with differential IK problems generated on the pink bench.
+- [ik\_qpbenchmark](https://github.com/qpsolvers/ik_qpbenchmark): A test set for QP solvers with differential IK problems generated on the pink bench.
