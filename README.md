@@ -2,6 +2,10 @@
 
 A library of robot motions performed by inverse kinematics and model predictive control.
 
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/5b169c2b-3c84-47b8-96d0-5b9095255f52" alt="Sample scenarios from the pink bench" />
+</p>
+
 ## Installation
 
 For best compatibility we recommended installing the bench from Conda:
