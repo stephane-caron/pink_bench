@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright 2024 Inria
 
+from pathlib import Path
 from typing import List
 
 import meshcat_shapes
@@ -81,6 +82,11 @@ class Scene:
                 f"One joint in {queried_joints} not found, "
                 f"names must be in {valid_joints}"
             ) from exn
+
+        if record:
+            videos_dir = Path("videos")
+            if not videos_dir.exists():
+                videos_dir.mkdir(parents=True, exist_ok=True)
 
         if visualize:
             visualizer.display(q_init)
