@@ -3,6 +3,16 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 # Copyright 2024 Inria
+#
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#   "meshcat",
+#   "meshcat-shapes>=0.3.0",
+#   "pink_bench",
+#   "qpsolvers>=4.3.1",
+# ]
+# ///
 
 import argparse
 import glob
