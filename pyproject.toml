@@ -65,3 +65,39 @@ ignore = [
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+
+[tool.pixi.pypi-dependencies]
+pink_bench = { path = ".", editable = true }
+
+[tool.pixi.dependencies]
+python = ">=3.9"
+loop-rate-limiters = ">=0.1.0"
+matplotlib = "*"
+meshcat-python = "*"
+meshcat-shapes = ">=0.3.0"
+pink = ">=3.1.0"
+qpmpc = ">=2.6.3,<4"
+qpsolvers = ">=4.3.1"
+robot_descriptions = ">=1.13.0"
+
+[tool.pixi.feature.examples.dependencies]
+ffmpeg = "*"
+
+[tool.pixi.feature.dev.dependencies]
+ruff = "*"
+
+[tool.pixi.environments]
+default = { solve-group = "default" }
+examples = { features = ["examples"], solve-group = "default" }
+dev = { features = ["dev"], solve-group = "default" }
+
+[tool.pixi.tasks]
+format = "ruff format ."
+lint = "ruff check ."
+record-videos = "python examples/record_videos.py"
+run-scenario = "python examples/run_scenario.py"
+run-step-by-step = "python examples/run_step_by_step.py"
