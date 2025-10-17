@@ -3,6 +3,18 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 # Copyright 2024 Inria
+#
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#   "loop-rate-limiters>=0.1.0",
+#   "meshcat",
+#   "meshcat-shapes>=0.3.0",
+#   "numpy",
+#   "pink_bench",
+#   "qpsolvers>=4.3.1",
+# ]
+# ///
 
 """Create a scene and step it problem by problem."""
 
