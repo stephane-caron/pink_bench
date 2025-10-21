@@ -7,6 +7,7 @@
 # /// script
 # requires-python = ">=3.9"
 # dependencies = [
+#   "clarabel",
 #   "meshcat",
 #   "meshcat-shapes>=0.3.0",
 #   "pink_bench",
@@ -39,7 +40,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--qpsolver",
         help="solver for the QP-based approach",
-        default="proxqp",
+        default="clarabel",
         choices=qpsolvers.available_solvers,
     )
     args = parser.parse_args()

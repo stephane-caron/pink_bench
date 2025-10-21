@@ -7,6 +7,7 @@
 # /// script
 # requires-python = ">=3.9"
 # dependencies = [
+#   "clarabel",
 #   "meshcat",
 #   "meshcat-shapes>=0.3.0",
 #   "pink_bench",
@@ -36,7 +37,7 @@ def parse_command_line_arguments() -> argparse.Namespace:
     parser.add_argument(
         "--qpsolver",
         help="solver for the QP-based approach",
-        default="proxqp",
+        default="clarabel",
         choices=qpsolvers.available_solvers,
     )
     parser.add_argument(
