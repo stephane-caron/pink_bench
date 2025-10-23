@@ -9,8 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Example to record videos for all or some scenarios in the library
+- examples: Record videos for all or some scenarios in the library
 - Support pixi for development and running examples
+
+### Changed
+
+- examples: Rename scenario parg to --robot kwarg
 
 ## [0.2.0] - 2024-12-16
 
