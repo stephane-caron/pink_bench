@@ -108,14 +108,21 @@ ffmpeg = "*"
 [tool.pixi.feature.dev.dependencies]
 ruff = "*"
 
+[tool.pixi.feature.test.dependencies]
+pytest = ">=7.0"
+pytest-cov = "*"
+
 [tool.pixi.environments]
 default = { solve-group = "default" }
 examples = { features = ["examples"], solve-group = "default" }
 dev = { features = ["dev"], solve-group = "default" }
+test = { features = ["test"], solve-group = "default" }
 
 [tool.pixi.tasks]
 format = "ruff format ."
 lint = "ruff check ."
-record-videos = "python examples/record_videos.py"
-run-scenario = "python examples/run_scenario.py"
-run-step-by-step = "python examples/run_step_by_step.py"
+scenario = "python examples/run_scenario.py"
+
+[tool.pixi.feature.test.tasks]
+test = "pytest tests/ -v"
+test-cov = "pytest tests/ -v --cov=pink_bench --cov-report=term-missing"
