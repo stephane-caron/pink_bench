@@ -43,6 +43,24 @@ Source = "https://github.com/stephane-caron/pink_bench"
 Tracker = "https://github.com/stephane-caron/pink_bench/issues"
 Changelog = "https://github.com/stephane-caron/pink_bench/blob/main/CHANGELOG.md"
 
+[tool.coverage.run]
+source = ["pink_bench"]
+omit = ["*/tests/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-v", "--tb=short"]
+
 [tool.ruff]
 line-length = 79
 
