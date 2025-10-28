@@ -8,23 +8,19 @@ A library of robot motions performed by inverse kinematics and model predictive 
     <img src="https://github.com/user-attachments/assets/5b169c2b-3c84-47b8-96d0-5b9095255f52" alt="Sample scenarios from the pink bench" />
 </p>
 
-## Installation
-
-For best compatibility we recommended installing the bench from Conda:
-
-```console
-conda install -c conda-forge pink_bench
-```
-
-You can also install it from PyPI:
-
-```console
-pip install pink_bench
-```
-
 ## Usage
 
-To play a scenario from the library, simply call:
+The recommended way to use pink\_bench is with [pixi](https://pixi.sh), which handles all dependencies automatically:
+
+```console
+git clone https://github.com/stephane-caron/pink_bench.git
+cd pink_bench
+pixi run scenario --robot ur5 --qpsolver quadprog
+```
+
+This will open a MeshCat tab in your web browser playing the scenario for its prescribed duration.
+
+This task is just an alias to [`examples/run_scenario.py`](examples/run_scenario.py), which simply calls:
 
 ```py
 pink_bench.play_scenario(
@@ -32,12 +28,6 @@ pink_bench.play_scenario(
     dt=0.005,  # seconds
     qpsolver="proxqp",
 )
-```
-
-This will open a MeshCat tab in your web browser playing the scenario for its prescribed duration. You can also do the same from the command-line:
-
-```console
-$ ./examples/run_scenario.py jaxon --dt 0.005 --qpsolver proxqp
 ```
 
 ## See also
