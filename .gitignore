@@ -4,3 +4,4 @@
 .ropeproject
 dist/
 examples/videos
+htmlcov/

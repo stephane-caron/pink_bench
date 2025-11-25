@@ -100,27 +100,50 @@ pink = ">=3.1.0"
 proxsuite = "*"
 python = ">=3.9"
 
-[tool.pixi.feature.examples.dependencies]
-ffmpeg = "*"
+[tool.pixi.feature.coverage.dependencies]
+coverage = ">=7.0"
+coveralls = ">=4.0.0"
+
+[tool.pixi.feature.coverage.tasks]
+coverage-erase = "coverage erase"
+coverage-run = { cmd = "coverage run -m pytest tests/ -v", depends-on = ["coverage-erase"] }
+coverage = { cmd = "coverage report --include=\"pink_bench/*\"", depends-on = ["coverage-run"] }
+coveralls = "coveralls --service=github"
 
 [tool.pixi.feature.dev.dependencies]
 ruff = "*"
 
-[tool.pixi.feature.test.dependencies]
-pytest = ">=7.0"
-pytest-cov = "*"
-
-[tool.pixi.environments]
-default = { solve-group = "default" }
-examples = { features = ["examples"], solve-group = "default" }
-dev = { features = ["dev"], solve-group = "default" }
-test = { features = ["test"], solve-group = "default" }
-
-[tool.pixi.tasks]
+[tool.pixi.feature.dev.tasks]
 format = "ruff format ."
 lint = "ruff check ."
-scenario = "python examples/run_scenario.py"
+
+[tool.pixi.feature.py39.dependencies]
+python = "3.9.*"
+
+[tool.pixi.feature.py310.dependencies]
+python = "3.10.*"
+
+[tool.pixi.feature.py311.dependencies]
+python = "3.11.*"
+
+[tool.pixi.feature.py312.dependencies]
+python = "3.12.*"
+
+[tool.pixi.feature.test.dependencies]
+pytest = ">=7.0"
 
 [tool.pixi.feature.test.tasks]
 test = "pytest tests/ -v"
-test-cov = "pytest tests/ -v --cov=pink_bench --cov-report=term-missing"
+
+[tool.pixi.environments]
+default = { solve-group = "default" }
+dev = { features = ["dev"], solve-group = "default" }
+test = { features = ["test"], solve-group = "default" }
+coverage = { features = ["py312", "test", "coverage"], solve-group = "py312" }
+test-py39 = { features = ["test", "py39"], solve-group = "py39" }
+test-py310 = { features = ["test", "py310"], solve-group = "py310" }
+test-py311 = { features = ["test", "py311"], solve-group = "py311" }
+test-py312 = { features = ["test", "py312"], solve-group = "py312" }
+
+[tool.pixi.tasks]
+scenario = "python examples/run_scenario.py"
