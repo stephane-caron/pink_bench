@@ -42,4 +42,5 @@ The pink bench is a combination of many open-source libraries:
 
 It is also related to the following projects:
 
-- [ik\_qpbenchmark](https://github.com/qpsolvers/ik_qpbenchmark): A test set for QP solvers with differential IK problems generated on the pink bench.
+- [ik\_qpbenchmark](https://github.com/qpsolvers/ik_qpbenchmark): Test set for QP solvers with differential IK problems generated on the pink bench.
+- [LoIK](https://github.com/Simple-Robotics/LoIK): Constrained differential inverse kinematics solver that was evaluated on pink\_bench problems.
