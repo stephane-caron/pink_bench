@@ -7,11 +7,7 @@
 # /// script
 # requires-python = ">=3.9"
 # dependencies = [
-#   "clarabel",
-#   "meshcat",
-#   "meshcat-shapes>=0.3.0",
 #   "pink_bench",
-#   "proxsuite",
 #   "qpsolvers>=4.3.1",
 # ]
 # ///
