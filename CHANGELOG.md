@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- CICD: Add coverage, lint and test workflows
 - examples: Record videos for all or some scenarios in the library
 - Support pixi for development and running examples
 
